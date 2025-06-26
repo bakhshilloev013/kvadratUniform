@@ -29,3 +29,20 @@ img {
     display: block;
     max-inline-size: 100%;
 }
+
+@import url('../fonts/Bank\ Gothic\ Light\ Regular.otf');
+@import url('../fonts/bank\ gothic\ medium\ bt.ttf');
+@import url('../fonts/BankGothicMediumBT.ttf');
+@import url('../fonts/BankGothic\ Md\ BT.ttf');
+@import url('../fonts/BankGothic\ Bold.ttf');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+:root {
+    --main-gold: #ffc100;
+}
