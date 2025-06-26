@@ -200,8 +200,6 @@ html {
             gap: 30px;
             flex-direction: column;
             justify-content: center;
-            .about__title {
-            }
         }
         .about__img {
             width: 100%;
