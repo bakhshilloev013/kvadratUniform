@@ -49,6 +49,7 @@ img {
     --space-mono: 'Space Mono', monospace;
     --main-title: 68px;
     --padding-block-size: 60px;
+    --margin-top-size: 60px;
     --title: 38px;
     --subtitle: 28px;
 }
@@ -63,6 +64,35 @@ img {
 
 .subtitle {
     font-size: var(--subtitle);
+}
+
+.btn_style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 2px solid var(--main-gold);
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-family: var(--space-mono);
+    transition: 0.3s all;
+    &:hover {
+        background: var(--main-gold);
+        i {
+            color: #fff;
+        }
+    }
+    &:active {
+        scale: 0.95;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .header {
@@ -110,26 +140,6 @@ img {
                         color: #000;
                     }
                 }
-            }
-        }
-        .header__call {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 10px 15px;
-            border-radius: 20px;
-            border: 2px solid var(--main-gold);
-            text-decoration: none;
-            color: #000;
-            font-weight: 500;
-            font-family: var(--space-mono);
-            transition: 0.3s all;
-            &:hover {
-                background: var(--main-gold);
-            }
-            &:active {
-                scale: 0.95;
             }
         }
     }
@@ -204,13 +214,11 @@ img {
     .category__items {
         height: 100%;
         padding-block: var(--padding-block-size);
-        .category__title {
-            /* text-align: center; */
-        }
         .category__content {
-            margin-top: 60px;
+            width: 100%;
+            margin-top: var(--margin-top-size);
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
             .category__item {
                 text-decoration: none;
@@ -218,7 +226,7 @@ img {
                 align-items: center;
                 justify-content: space-between;
                 padding: 20px;
-                box-shadow: 0 0 15px 5px lightgray;
+                border: 1px solid var(--main-gold);
                 border-radius: 20px;
                 transition: 0.3s all;
                 img {
@@ -231,10 +239,73 @@ img {
                 }
                 &:hover {
                     scale: 1.1;
-                    box-shadow: 0 0 15px 5px var(--main-gold);
                     .category__item-text {
                         color: #000;
                     }
+                }
+            }
+        }
+    }
+}
+
+.blog {
+    .blog__items {
+        height: 100%;
+        padding-block: var(--padding-block-size);
+        .blog__content {
+            margin-top: var(--margin-top-size);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            .blog__video {
+                height: 350px;
+                box-shadow: 0 0 15px 5px gainsboro;
+                border-radius: 20px;
+                video {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            .blog__text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                gap: 30px;
+            }
+        }
+    }
+}
+
+.service {
+    .service__items {
+        padding-block: var(--padding-block-size);
+        .service__content {
+            margin-top: var(--margin-top-size);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            .service__item {
+                min-height: 300px;
+                border-radius: 20px 20px 0 0;
+                border: 1px solid var(--main-gold);
+                position: relative;
+                .service__item-img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 20px 20px 0 0;
+                }
+                .service__item-title {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    background: #fff;
+                    min-height: 50px;
+                    padding: 20px;
+                    text-transform: capitalize;
+                    font-weight: 500;
+                    font-size: 22px;
                 }
             }
         }
