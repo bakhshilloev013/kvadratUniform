@@ -332,3 +332,61 @@ html {
         }
     }
 }
+
+.marquee {
+    border-top: 5px solid gainsboro;
+    border-bottom: 5px solid gainsboro;
+    height: 90px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    gap: 40px;
+    white-space: nowrap;
+    position: relative;
+    .marquee__items {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: inline-flex;
+        gap: 40px;
+        align-items: center;
+        animation: marquee 10s linear infinite;
+        list-style: none;
+        .marquee__item {
+            img {
+                display: block;
+                scale: 1.1;
+            }
+        }
+    }
+    .container {
+        position: relative;
+        .marquee__title {
+            border-right: 5px solid gainsboro;
+            background: #fff;
+            height: 100%;
+            padding: 0 20px;
+            font-weight: 700;
+            font-size: 25px;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: 0;
+        }
+    }
+
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
