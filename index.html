@@ -3,6 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
+        <link rel="manifest" href="./icons/site.webmanifest">
         <!-- Normalize CSS -->
         <link
             rel="stylesheet"
@@ -18,18 +23,20 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css"
         />
+        <!-- AOS CSS CDN -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <!-- CSS -->
         <link rel="stylesheet" href="./css/style.css" />
-        <title>Kvadrat Uniforma</title>
+        <title>Kvadrat Uniforma | Специальная одежда и униформа</title>
     </head>
     <body id="start">
         <header class="header">
             <div class="container header__items">
-                <a href="#start" class="header__logo">
+                <a data-aos="fade-right" href="#start" class="header__logo">
                     <img src="./icons/logo.svg" alt="" />
                 </a>
 
-                <ul class="header__links">
+                <ul data-aos="zoom-in" class="header__links">
                     <!-- biz haqimizda, kolleksiya, blog, servis, do’konlar, aloqa -->
                     <li><a href="#about">biz haqimizda</a></li>
                     <li><a href="#collection">kolleksiya</a></li>
@@ -39,7 +46,7 @@
                     <li><a href="">aloqa</a></li>
                 </ul>
 
-                <a href="tel:+998337209000" class="header__call btn_style">
+                <a data-aos="fade-left" href="tel:+998337209000" class="header__call btn_style">
                     <i class="fa-solid fa-phone"></i>
                     +998(33) 720-90-00
                 </a>
@@ -80,7 +87,7 @@
             </div>
             <div class="promo__content">
                 <div class="container promo__items">
-                    <h1 class="promo__title">
+                    <h1 data-aos="zoom-out" class="promo__title">
                         <span>Hello world</span> from promo section!
                     </h1>
                 </div>
@@ -89,7 +96,7 @@
 
         <section id="about" class="about">
             <div class="container about__items">
-                <div class="about__text">
+                <div data-aos="fade-right" class="about__text">
                     <h2 class="about__title title">
                         <span>Hello world</span> from about section!
                     </h2>
@@ -100,16 +107,16 @@
                         reiciendis, iste repellat.
                     </div>
                 </div>
-                <img class="about__img" src="./img/car-1.jpg" alt="" />
+                <img data-aos="fade-left" class="about__img" src="./img/car-1.jpg" alt="" />
             </div>
         </section>
 
         <div id="collection" class="category">
             <div class="category__items container">
-                <h2 class="category__title title">
+                <h2 data-aos="fade-right" class="category__title title">
                     <span>Hello world</span> from category section!
                 </h2>
-                <div class="category__content">
+                <div data-aos="fade-up" class="category__content">
                     <a href="" class="category__item">
                         <img src="" alt="" class="category__item-img" />
                         <span class="category__item-text"
@@ -140,14 +147,14 @@
 
         <section id="blog" class="blog">
             <div class="container blog__items">
-                <h2 class="blog__title title">
+                <h2 data-aos="fade-right" class="blog__title title">
                     <span>Hello world</span> from blog section!
                 </h2>
                 <div class="blog__content">
-                    <div class="blog__video">
+                    <div data-aos="fade-right" class="blog__video">
                         <iframe width="640" height="360" src="https://www.youtube.com/embed/qTuKVNXMNXY?start=6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <div class="blog__text">
+                    <div data-aos="fade-left" class="blog__text">
                         <div class="blog__subtitle subtitle">
                             Lorem ipsum, dolor sit amet consectetur adipisicing
                             elit. Temporibus impedit blanditiis modi recusandae.
@@ -163,11 +170,11 @@
 
         <section class="service">
             <div class="container service__items">
-                <h2 class="service__title title">
+                <h2 data-aos="fade-right" class="service__title title">
                     <span>Hello world</span>
                     from service section!
                 </h2>
-                <div class="service__content">
+                <div data-aos="fade-up" class="service__content">
                     <div class="service__item">
                         <img src="./img/car-1.jpg" alt="" class="service__item-img">
                         <div class="service__item-title">service item</div>
@@ -192,6 +199,13 @@
             </div>
         </section>
 
+        <a data-aos="zoom-in" href="#start" class="chevron">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+
+        <!-- AOS JS CDN -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- Bootstrap JS CDN -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/js/bootstrap.bundle.min.js"></script>
         <script src="./js/script.js"></script>
     </body>
