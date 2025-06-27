@@ -29,3 +29,18 @@ window.addEventListener('scroll', () => {
         });
     });
 });
+
+const serviceItems = document.querySelectorAll('.service__item');
+serviceItems.forEach((item) => {
+    let srcImg;
+    const img = item.querySelector('img');
+    item.addEventListener('mouseenter', (e) => {
+        if (e.target.closest('.service__item')) {
+            srcImg = img.src;
+            img.src = './img/car-2.jpg';
+        }
+    });
+    item.addEventListener('mouseleave', (e) => {
+        img.src = srcImg;
+    });
+});

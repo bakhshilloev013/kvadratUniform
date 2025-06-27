@@ -276,7 +276,7 @@ html {
         .blog__content {
             margin-top: var(--margin-top-size);
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
             gap: 50px;
             .blog__video {
                 height: 350px;
@@ -311,11 +311,14 @@ html {
                 border-radius: 20px 20px 0 0;
                 border: 1px solid var(--main-gold);
                 position: relative;
+                transition: 0.3s all;
                 .service__item-img {
                     height: 100%;
                     width: 100%;
                     object-fit: cover;
                     border-radius: 20px 20px 0 0;
+                    transition: 0.3s all;
+                    transform: scale(1);
                 }
                 .service__item-title {
                     position: absolute;
@@ -390,3 +393,58 @@ html {
     }
 }
 
+.stores {
+    min-height: 100vh;
+    border-top: 5px solid gainsboro;
+    border-bottom: 5px solid gainsboro;
+    .stores__items {
+        height: 100%;
+        padding-block: var(--padding-block-size);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+        gap: 60px;
+        .stores__map {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            iframe {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .stores__content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
+            gap: 20px;
+            .stores__card {
+                position: relative;
+                .stores__card-img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+                .stores__card-text {
+                    min-height: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    padding: 15px 10px;
+                    background: rgba(0,0,0, .7);
+                    color: #fff;
+                    .stores__card-title {
+                        font-size: 22px;
+                        font-weight: 700;
+                    }
+                    .stores__card-call {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
